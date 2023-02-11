@@ -1,13 +1,17 @@
 td{
-    border: 1px solid #609EA2;
+    border: 1px solid #1B262C;
     padding: 10px;
+    margin: 0;
+    min-width: 5rem;
 }
 
 table{
     table-layout: fixed;
-    width: 100%;
 }
 
+tr{
+    border: 1px solid ;
+}
 /* .buttons{
     background-color: brown;
     width: fit-content;
@@ -15,13 +19,20 @@ table{
     right: 7rem;
     top: 10rem;
 } */
+.input{
+    background-color: white;
+    width: 100%;
+    border: 1px solid black;
+}
 
 .tab{
     max-width: 50rem;
+    max-height: 33rem;
+    overflow: auto;
 }
 
-.input{
-    width: 100%;
+#outlined-number{
+    background-color: white;
 }
 
 .rowCol{
@@ -34,6 +45,7 @@ table{
     width: 20rem;
     padding: 50px 50px 0px 50px;
     position: fixed;
+    top: 15rem;
     right: 6rem;
     background-color: #C92C6D;
     border: 1px solid #ad1b58;
@@ -42,7 +54,7 @@ table{
 }
 
 .house{
-    background-color: #f3478f;
+    background-color: #3282B8;
 }
 
 .close{
@@ -59,6 +71,7 @@ table{
     padding: 50px 50px 50px 50px;
     position: fixed;
     right: 6rem;
+    top: 15rem;
     background-color: #2cc92c;
     border: 1px solid #27ad1b;
     border-radius: 10px;

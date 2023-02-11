@@ -81,16 +81,16 @@ const Table = () => {
       
         for (let i = 0; i < n; i++) {
           for (let j = 0; j < m; j++) {
-            if (matrix[i][j].includes("gym")) {
+            if (matrix[i][j].toLowerCase().includes("gym")) {
               gym = [i, j];
             }
-            if (matrix[i][j].includes("restaurant")) {
+            if (matrix[i][j].toLowerCase().includes("restaurant")) {
               restaurant = [i, j];
             }
-            if (matrix[i][j].includes("hospital")) {
+            if (matrix[i][j].toLowerCase().includes("hospital")) {
               hospital = [i, j];
             }
-            if (matrix[i][j].includes("house")) {
+            if (matrix[i][j].toLowerCase().includes("house")) {
               houses.push([i, j]);
             }
           }
@@ -169,7 +169,7 @@ const Table = () => {
                     setRecommend(false)
                     setRules(true)
                     }}>Create Table</Button>
-                <Button onClick={() =>{ 
+                {/* <Button onClick={() =>{ 
                     setIsTableStatic(true) 
                     setHouseClass("house")
                     setShowCreated(false);
@@ -177,27 +177,32 @@ const Table = () => {
                     setRules(true)
                     }}>
                     Fix the table
-                </Button>
-                <Button onClick={() => {setIsTableStatic(false)
+                </Button> */}
+                <Button onClick={() => {
+                setIsTableStatic(false)
                 setHouseClass("")
                 setShowCreated(false);
                 setRecommend(false)
                 setRules(true)
                 }}>
-                    Make Table editable
+                    EDIT TABLE
                 </Button>
                 <br />
-                <Button onClick={()=>{createArray()
+                <Button onClick={()=>{
+                    setIsTableStatic(true) 
                     setShowCreated(true);
                     setRules(false);
                     setRecommend(false)
+                    setHouseClass("house")
+                    
                 }
                 }>Finalize the Layout</Button>
 
                 <Button onClick={()=>
                 {
+                    createArray()
                     setRecommend(true)
-                    setHouseClass("")
+                    setHouseClass("house")
                     setShowCreated(false);
                 }}>Recommend Best house</Button>
             </div>
@@ -233,16 +238,15 @@ const Table = () => {
                     <ul  className="rules">
                         <h2>Rules:</h2>
                         <li>1. We have 4 choices to fill.</li>
-                        <h4>house, restaurant, gym and hospital.</h4>
-                        <li>2. Write the spellings of each building correctly.</li>
-                        <li>3. We can give numbers to houses like house 1, house 2 etc..</li>
-                        <li>4. Flow of Table</li>
+                        <h4>House, Restaurant, Gym and Hospital.</h4>
+                        <li>2. We can give numbers to houses like house 1, house 2 etc..</li>
+                        <li>3. Restaurant, Gym and Hospital can only be 1-1 each.</li>
+                        <li>4. Restaurant, Gym and Hospital Can either be in same cell <br /> or different cell.</li>
+                        <li>5. Flow of Table</li>
                         <ol>
-                            <li> Input number of rows and columns</li>
+                            <li>Input number of rows and columns</li>
                             <li>CREATE TABLE</li>
-                            <li>FIX TABLE</li>
                             <li>EDIT TABLE (only if you filled the inputs wrong)</li>
-                            <li>FIX TABLE again</li>
                             <li>FINALIZE THE LAYOUT</li>
                             <li>GET RECOMMENDATION</li>
                         </ol>
