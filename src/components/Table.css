@@ -1,0 +1,82 @@
+td{
+    border: 1px solid #609EA2;
+    padding: 10px;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* .buttons{
+    background-color: brown;
+    width: fit-content;
+    position: fixed;
+    right: 7rem;
+    top: 10rem;
+} */
+
+.tab{
+    max-width: 50rem;
+}
+
+.input{
+    width: 100%;
+}
+
+.rowCol{
+    position: fixed;
+    right: 5rem;
+    margin-top: 2%;
+}
+
+.final{
+    width: 20rem;
+    padding: 50px 50px 0px 50px;
+    position: fixed;
+    right: 6rem;
+    background-color: #C92C6D;
+    border: 1px solid #ad1b58;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.house{
+    background-color: #f3478f;
+}
+
+.close{
+    border: none;
+    background-color: red;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.finalized{
+    width: 20rem;
+    padding: 50px 50px 50px 50px;
+    position: fixed;
+    right: 6rem;
+    background-color: #2cc92c;
+    border: 1px solid #27ad1b;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.rules{
+    background-color: rgb(240, 76, 76);
+    width: fit-content;
+    text-align: left;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: fixed;
+    right: 5rem;
+    top: 15rem;
+}
+
+ul{
+    list-style-type: none;
+}
